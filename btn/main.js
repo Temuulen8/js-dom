@@ -1,25 +1,21 @@
-// function aaa() {
-//   console.log("button clicked");
-//   document.getElementById("box").style.backgroundColor = "blue";
-// }
 const boxEl = document.getElementsByClassName("box")[0];
-const btnEl = document.getElementsByTagName("button")[0];
+const btnEL = document.getElementsByTagName("button")[0];
 console.log(boxEl);
-console.log(btnEl);
+console.log(btnEL);
 
-const colors = ["green", "blue", "red"];
+const colors = ["green", "yellow", "red"];
 let i = 0;
 
 function generateColor() {
-  console.log("changed");
-  const rColor = Math.floor(Math.random() * 256);
-  const gColor = Math.floor(Math.random() * 256);
+  const rColor = Math.floor(Math.random() * 256); // 0.9234324 => 253
+  const gColor = Math.floor(Math.random() * 256); // 0.9234324 => 253
   const bColor = Math.floor(Math.random() * 256);
-  //   "rgb(" + rColor + "," + rColor + "," + rColor + ")";
+  //   return "rgb(" + rColor + "," + gColor + "," + bColor + ")"; //
   return `rgb(${rColor},${gColor},${bColor})`;
 }
+
 function changeBackgroundColor() {
-  boxEl.style.backgroundcolor = generateColor();
+  boxEl.style.backgroundColor = generateColor();
 
   //   boxEl.style.backgroundColor = colors[i];
   //   i++;
@@ -27,4 +23,5 @@ function changeBackgroundColor() {
   //     i = 0;
   //   }
 }
-btnEl.addEventListener("click", changeBackgroundColor);
+
+btnEL.addEventListener("click", changeBackgroundColor);
