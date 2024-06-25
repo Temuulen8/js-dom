@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    display: flex;
+    
+    flex-direction: column;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    background-color:lightblue;
+    
+}
+.grid-item{
+    border: 1px solid black;
+}
+
